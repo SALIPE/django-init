@@ -10,9 +10,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from ..decorations import validate_jwt
-from ..models import Tbuser, Tbusertype
+from ..models.user import User
 from ..serializers import (UserAuthTokenSerializer, UserDisplaySerializer,
-                          UserSerializer, UserTypeSerializer)
+                           UserSerializer)
 from ..utils import generate_jwt_token
 
 JWT_SECRET = settings.SECRET_KEY
@@ -46,7 +46,7 @@ class UserRefreshTokenView(APIView):
             user_id = payload.get("user_id")
             if not user_id:
                 raise jwt.ExpiredSignatureError("Invalid token")
-            user = Tbuser.objects.get(cvid=user_id)
+            user = User.objects.get(id=user_id)
             new_access_token = generate_jwt_token(user)
 
             return JsonResponse({"access_token": new_access_token})
@@ -60,16 +60,16 @@ class UserRefreshTokenView(APIView):
 class UserListView(APIView):
     # List all users or create a new user
     def get(self, request, *args, **kwargs):
-        users = Tbuser.objects.all()
+        users = User.objects.all()
         serializer = UserDisplaySerializer(users, many=True)
         return Response(serializer.data)
 
     def post(self, request, *args, **kwargs):
-        logged_user = Tbuser.objects.get(cvid=request.user_id)
+        logged_user = User.objects.get(cvid=request.user_id)
         if logged_user.is_admin:
             cvid = request.data.get("cvid")
             if cvid:
-                user = Tbuser.objects.get(pk=cvid)
+                user = User.objects.get(pk=cvid)
                 serializer = UserSerializer(user, data=request.data)
             else:
                 serializer = UserSerializer(data=request.data)
@@ -79,23 +79,3 @@ class UserListView(APIView):
                 return Response("OK", status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response("User has no privilegies to this action", status=401)
-
-@method_decorator(validate_jwt, name='dispatch') 
-class HandleUserType(APIView):
-
-    def get(self, request, *args, **kwargs):
-        users = Tbusertype.objects.all()
-        serializer = UserTypeSerializer(users, many=True)
-        return Response(serializer.data)
-    
-    def post(self, request, *args, **kwargs):
-        user = Tbuser.objects.get(cvid=request.user_id)
-        if user.is_admin:
-            usertype = UserTypeSerializer(data=request.data)
-            if usertype.is_valid():
-                usertype.save()
-                return Response("OK", status=status.HTTP_201_CREATED)
-            return Response(usertype.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        return Response("User has no privilegies to this action", status=401)
-    

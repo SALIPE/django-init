@@ -1,7 +1,7 @@
 from django.contrib.auth.hashers import check_password, make_password
 from rest_framework import serializers
 
-from .models import Tbuser, Tbusertype
+from .models.user import User
 
 
 class UserAuthTokenSerializer(serializers.Serializer):
@@ -13,56 +13,37 @@ class UserAuthTokenSerializer(serializers.Serializer):
         password = data.get('password')
 
         try:
-            user = Tbuser.objects.get(ccemail=username) 
-        except Tbuser.DoesNotExist:
-            # Raise an error if the user does not exist
+            user = User.objects.get(email=username) 
+        except User.DoesNotExist:
             raise serializers.ValidationError("User not exist")
 
-        # Check if the provided password matches the hashed password in the database
-        if not check_password(password, user.ccpassword):
+        if not check_password(password, user.password):
             raise serializers.ValidationError("Invalid credentials")
 
-        # If valid, add the user instance to validated data and return it
         data['user'] = user
         return data
 
 class UserDisplaySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Tbuser
-        fields = ['cvid', 'ccname', 'ccemail', 'ccpassword', 'cvusertype']
+        model = User
+        fields = ['id', 'name', 'email']
         
 class UserSerializer(serializers.ModelSerializer):
     cvusertype = serializers.IntegerField()
 
     class Meta:
-        model = Tbuser
-        fields = ['cvid', 'ccname', 'ccemail', 'ccpassword', 'cvusertype']
+        model = User
+        fields = ['id', 'name', 'email']
 
     def create(self, validated_data):
        
-        user_type_id = validated_data.pop('cvusertype')
-        user_type = Tbusertype.objects.get(cvid=user_type_id)
-
-        # Hash the password before saving
-        validated_data['ccpassword'] = make_password(validated_data['ccpassword'])
-
-        # Create the user instance
-        user = Tbuser.objects.create(cvusertype=user_type, **validated_data)
+        user = User.objects.create(**validated_data)
         return user
 
     def update(self, instance, validated_data):
        
-        user_type_id = validated_data.pop('cvusertype', None)
-        if user_type_id:
-            instance.cvusertype = Tbusertype.objects.get(cvid=user_type_id)
-
-        # Update fields
-        instance.ccname = validated_data.get('ccname', instance.ccname)
-        instance.ccemail = validated_data.get('ccemail', instance.ccemail)
+        instance.name = validated_data.get('name', instance.name)
+        instance.email = validated_data.get('email', instance.email)
         
-        # If password is provided, hash it
-        if 'ccpassword' in validated_data:
-            instance.ccpassword = make_password(validated_data['ccpassword'])
-
         instance.save()
         return instance

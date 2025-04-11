@@ -2,8 +2,6 @@ import jwt
 from django.conf import settings
 from django.http import JsonResponse
 
-from .models import Tbuser
-
 JWT_SECRET = settings.SECRET_KEY
 JWT_ALGORITHM = "HS256"
 
@@ -22,7 +20,6 @@ def validate_jwt(view_func):
             if user_id is None:
                 return JsonResponse({"error": "Invalid token"}, status=404)
             else:
-                # user = Tbuser.objects.get(cvid=user_id)
                 request.user_id = user_id
 
         except jwt.ExpiredSignatureError:
