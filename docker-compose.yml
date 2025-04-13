@@ -10,7 +10,7 @@ services:
       - "5432:5432"
     
   web:
-    build: ./users
+    build: ./django
     command: >
       sh -c "python manage.py makemigrations &&
              python manage.py migrate &&
