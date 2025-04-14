@@ -1,18 +1,11 @@
-import json
-
 import jwt
-import requests
-from django.conf import settings
-from django.http import JsonResponse
-from django.utils.decorators import method_decorator
-from rest_framework import status
-from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from ..decorations import validate_jwt
+from django.conf import settings
+from django.http import JsonResponse
+
 from ..models.user import User
-from ..serializers import (UserAuthTokenSerializer, UserDisplaySerializer,
-                           UserSerializer)
+from ..serializers import UserAuthTokenSerializer
 from ..utils import generate_jwt_token
 
 JWT_SECRET = settings.SECRET_KEY
@@ -26,7 +19,6 @@ class UserObtainTokenPairView(APIView):
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
 
-        # Generate and return JWT token
         token = generate_jwt_token(user)
         return JsonResponse({"token": token})
     
@@ -56,26 +48,5 @@ class UserRefreshTokenView(APIView):
             return JsonResponse({"error": "Invalid refresh token"}, status=401)
 
 
-@method_decorator(validate_jwt, name='dispatch')
-class UserListView(APIView):
-    # List all users or create a new user
-    def get(self, request, *args, **kwargs):
-        users = User.objects.all()
-        serializer = UserDisplaySerializer(users, many=True)
-        return Response(serializer.data)
-
-    def post(self, request, *args, **kwargs):
-        logged_user = User.objects.get(cvid=request.user_id)
-        if logged_user.is_admin:
-            cvid = request.data.get("cvid")
-            if cvid:
-                user = User.objects.get(pk=cvid)
-                serializer = UserSerializer(user, data=request.data)
-            else:
-                serializer = UserSerializer(data=request.data)
-
-            if serializer.is_valid():
-                serializer.save()
-                return Response("OK", status=status.HTTP_201_CREATED)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        return Response("User has no privilegies to this action", status=401)
+    
+    

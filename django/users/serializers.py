@@ -1,5 +1,6 @@
-from django.contrib.auth.hashers import check_password, make_password
 from rest_framework import serializers
+
+from django.contrib.auth.hashers import check_password, make_password
 
 from .models.user import User
 
@@ -22,28 +23,37 @@ class UserAuthTokenSerializer(serializers.Serializer):
 
         data['user'] = user
         return data
-
-class UserDisplaySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['id', 'name', 'email']
-        
+    
 class UserSerializer(serializers.ModelSerializer):
-    cvusertype = serializers.IntegerField()
+    password = serializers.CharField(write_only=True)
 
     class Meta:
         model = User
-        fields = ['id', 'name', 'email']
-
+        fields = (
+            'id',
+            'first_name',
+            'last_name',
+            'email',
+            'password',
+            'phone'
+        )
+    
     def create(self, validated_data):
-       
+        if 'password' in validated_data:
+            validated_data['password'] = make_password(validated_data['password'])
         user = User.objects.create(**validated_data)
         return user
 
     def update(self, instance, validated_data):
-       
-        instance.name = validated_data.get('name', instance.name)
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.last_name = validated_data.get('last_name', instance.last_name)
         instance.email = validated_data.get('email', instance.email)
+        instance.phone = validated_data.get('phone', instance.phone)
+
+        if 'password' in validated_data:
+            instance.password = make_password(validated_data['password'])
         
         instance.save()
         return instance
+
+

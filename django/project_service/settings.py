@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'users_app',
+    'users',
     'content',
     'corsheaders',
 ]
@@ -83,7 +83,7 @@ CORS_ALLOW_HEADERS = [
 ]
 CORS_ALLOW_CREDENTIALS = True
 
-ROOT_URLCONF = 'users_microservice.urls'
+ROOT_URLCONF = 'project_service.urls'
 
 TEMPLATES = [
     {
@@ -101,7 +101,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'users_microservice.wsgi.application'
+WSGI_APPLICATION = 'project_service.wsgi.application'
 
 
 # Database

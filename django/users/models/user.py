@@ -6,13 +6,14 @@ from django.db import models
 class User(models.Model):
 
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=45, blank=False, null=False)
+    first_name = models.CharField(max_length=45, blank=False, null=False)
+    last_name = models.CharField(max_length=45, blank=False, null=False)
     email = models.EmailField(max_length=100, unique=True, blank=False, null=False)
     password = models.CharField(max_length=256, blank=False, null=False)
     phone = models.CharField(max_length=45, blank=False, null=False)
 
     def __str__(self):
-        return self.name or "No name"
+        return self.first_name or "No name"
     
     def set_password(self, raw_password):
         self.password = make_password(raw_password)
@@ -27,7 +28,8 @@ class User(models.Model):
 
 class Staff(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=150, unique=True)
+    first_name = models.CharField(max_length=45, blank=False, null=False)
+    last_name = models.CharField(max_length=45, blank=False, null=False)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=128)
   
