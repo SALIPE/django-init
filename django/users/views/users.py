@@ -1,5 +1,5 @@
 from rest_framework import status
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -9,7 +9,17 @@ from django.utils.decorators import method_decorator
 from ..decorations import validate_jwt
 from ..models.user import User
 from ..serializers import UserSerializer
+from ..utils import decrypt_id
 
+
+class ListUsers(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        users = User.objects.all()
+        serializer = UserSerializer(users, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
 
 class PublicUserCreationView(APIView):
     permission_classes = [AllowAny]
@@ -26,12 +36,12 @@ class UserDetailAPIView(APIView):
         return get_object_or_404(User, pk=pk)
 
     def get(self, request, pk):
-        user = self.get_object(pk)
+        user = self.get_object(decrypt_id(pk, User._meta.db_table))
         serializer = UserSerializer(user)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def put(self, request, pk):
-        user = self.get_object(pk)
+        user = self.get_object(decrypt_id(pk, User._meta.db_table))
         serializer = UserSerializer(user, data=request.data)
         if serializer.is_valid():
             serializer.save()

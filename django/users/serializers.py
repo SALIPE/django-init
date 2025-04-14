@@ -3,6 +3,7 @@ from rest_framework import serializers
 from django.contrib.auth.hashers import check_password, make_password
 
 from .models.user import User
+from .utils import encrypt_id
 
 
 class UserAuthTokenSerializer(serializers.Serializer):
@@ -25,18 +26,24 @@ class UserAuthTokenSerializer(serializers.Serializer):
         return data
     
 class UserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
+    cvid = serializers.SerializerMethodField()
 
     class Meta:
         model = User
         fields = (
-            'id',
+            'cvid',
             'first_name',
             'last_name',
             'email',
             'password',
             'phone'
         )
+        extra_kwargs = {
+            'password': {'write_only': True},
+        }
+
+    def get_cvid(self, obj):
+        return encrypt_id(obj.id, obj._meta.db_table)
     
     def create(self, validated_data):
         if 'password' in validated_data:
