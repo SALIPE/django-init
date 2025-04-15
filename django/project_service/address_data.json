@@ -1,0 +1,3309 @@
+[
+  {
+    "model": "users.country",
+    "pk": 1,
+    "fields": {
+      "name": "Brazil",
+      "code": "BR"
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 1,
+    "fields": {
+      "name": "São Paulo",
+      "acronym": "SP",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 2,
+    "fields": {
+      "name": "Rio de Janeiro",
+      "acronym": "RJ",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 3,
+    "fields": {
+      "name": "Minas Gerais",
+      "acronym": "MG",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 4,
+    "fields": {
+      "name": "Rio Grande do Sul",
+      "acronym": "RS",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 5,
+    "fields": {
+      "name": "Distrito Federal",
+      "acronym": "DF",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 6,
+    "fields": {
+      "name": "Pernambuco",
+      "acronym": "PE",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 7,
+    "fields": {
+      "name": "Ceará",
+      "acronym": "CE",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 8,
+    "fields": {
+      "name": "Bahia",
+      "acronym": "BA",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 9,
+    "fields": {
+      "name": "Paraná",
+      "acronym": "PR",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 10,
+    "fields": {
+      "name": "Pará",
+      "acronym": "PA",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 11,
+    "fields": {
+      "name": "Goiás",
+      "acronym": "GO",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 12,
+    "fields": {
+      "name": "Amazonas",
+      "acronym": "AM",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 13,
+    "fields": {
+      "name": "Espírito Santo",
+      "acronym": "ES",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 14,
+    "fields": {
+      "name": "Amapá",
+      "acronym": "AP",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 15,
+    "fields": {
+      "name": "Alagoas",
+      "acronym": "AL",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 16,
+    "fields": {
+      "name": "Rio Grande do Norte",
+      "acronym": "RN",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 17,
+    "fields": {
+      "name": "Maranhão",
+      "acronym": "MA",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 18,
+    "fields": {
+      "name": "Santa Catarina",
+      "acronym": "SC",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 19,
+    "fields": {
+      "name": "Paraíba",
+      "acronym": "PB",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 20,
+    "fields": {
+      "name": "Piauí",
+      "acronym": "PI",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 21,
+    "fields": {
+      "name": "Mato Grosso",
+      "acronym": "MT",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 22,
+    "fields": {
+      "name": "Mato Grosso do Sul",
+      "acronym": "MS",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 23,
+    "fields": {
+      "name": "Sergipe",
+      "acronym": "SE",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 24,
+    "fields": {
+      "name": "Rondônia",
+      "acronym": "RO",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 25,
+    "fields": {
+      "name": "Acre",
+      "acronym": "AC",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 26,
+    "fields": {
+      "name": "Tocantins",
+      "acronym": "TO",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.state",
+    "pk": 27,
+    "fields": {
+      "name": "Roraima",
+      "acronym": "RR",
+      "country": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 1,
+    "fields": {
+      "name": "São Paulo",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 2,
+    "fields": {
+      "name": "Rio de Janeiro",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 3,
+    "fields": {
+      "name": "Belo Horizonte",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 4,
+    "fields": {
+      "name": "Porto Alegre",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 5,
+    "fields": {
+      "name": "Brasília",
+      "state": 5
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 6,
+    "fields": {
+      "name": "Recife",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 7,
+    "fields": {
+      "name": "Fortaleza",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 8,
+    "fields": {
+      "name": "Salvador",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 9,
+    "fields": {
+      "name": "Curitiba",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 10,
+    "fields": {
+      "name": "Campinas",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 11,
+    "fields": {
+      "name": "Belém",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 12,
+    "fields": {
+      "name": "Goiânia",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 13,
+    "fields": {
+      "name": "Manaus",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 14,
+    "fields": {
+      "name": "Santos",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 15,
+    "fields": {
+      "name": "Vitória",
+      "state": 13
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 16,
+    "fields": {
+      "name": "Niterói",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 17,
+    "fields": {
+      "name": "Vila Velha",
+      "state": 13
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 18,
+    "fields": {
+      "name": "Vila Velha",
+      "state": 14
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 19,
+    "fields": {
+      "name": "Maceió",
+      "state": 15
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 20,
+    "fields": {
+      "name": "Natal",
+      "state": 16
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 21,
+    "fields": {
+      "name": "São Luís",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 22,
+    "fields": {
+      "name": "Florianópolis",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 23,
+    "fields": {
+      "name": "Joinvile",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 24,
+    "fields": {
+      "name": "Natal",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 25,
+    "fields": {
+      "name": "João Pessoa",
+      "state": 19
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 26,
+    "fields": {
+      "name": "Olinda",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 27,
+    "fields": {
+      "name": "Teresina",
+      "state": 20
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 28,
+    "fields": {
+      "name": "Novo Hamburgo",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 29,
+    "fields": {
+      "name": "Cuiabá",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 30,
+    "fields": {
+      "name": "Campo Grande",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 31,
+    "fields": {
+      "name": "São José dos Campos",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 32,
+    "fields": {
+      "name": "Jaboatão",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 33,
+    "fields": {
+      "name": "Aracaju",
+      "state": 23
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 34,
+    "fields": {
+      "name": "São José dos Pinhais",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 35,
+    "fields": {
+      "name": "Santo André",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 36,
+    "fields": {
+      "name": "Canoas",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 37,
+    "fields": {
+      "name": "Uberlândia",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 38,
+    "fields": {
+      "name": "Sorocaba",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 39,
+    "fields": {
+      "name": "Ribeirão Prêto",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 40,
+    "fields": {
+      "name": "Londrina",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 41,
+    "fields": {
+      "name": "Jundiaí",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 42,
+    "fields": {
+      "name": "Macapá",
+      "state": 14
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 43,
+    "fields": {
+      "name": "Feira de Santana",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 44,
+    "fields": {
+      "name": "Americana",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 45,
+    "fields": {
+      "name": "Juiz de Fora",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 46,
+    "fields": {
+      "name": "Volta Redonda",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 47,
+    "fields": {
+      "name": "Foz do Iguaçu",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 48,
+    "fields": {
+      "name": "Campina Grande",
+      "state": 19
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 49,
+    "fields": {
+      "name": "Ipatinga",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 50,
+    "fields": {
+      "name": "Taubaté",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 51,
+    "fields": {
+      "name": "Campos",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 52,
+    "fields": {
+      "name": "Caxias do Sul",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 53,
+    "fields": {
+      "name": "São José do Rio Prêto",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 54,
+    "fields": {
+      "name": "Piracicaba",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 55,
+    "fields": {
+      "name": "Bauru",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 56,
+    "fields": {
+      "name": "Montes Claros",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 57,
+    "fields": {
+      "name": "Maringá",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 58,
+    "fields": {
+      "name": "Itajaí",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 59,
+    "fields": {
+      "name": "Pelotas",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 60,
+    "fields": {
+      "name": "Itu",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 61,
+    "fields": {
+      "name": "Anápolis",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 62,
+    "fields": {
+      "name": "Vitória da Conquista",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 63,
+    "fields": {
+      "name": "Pôrto Velho",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 64,
+    "fields": {
+      "name": "Franca",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 65,
+    "fields": {
+      "name": "Blumenau",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 66,
+    "fields": {
+      "name": "Ponta Grossa",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 67,
+    "fields": {
+      "name": "Limeira",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 68,
+    "fields": {
+      "name": "Petrópolis",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 69,
+    "fields": {
+      "name": "Crato",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 70,
+    "fields": {
+      "name": "Crato",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 71,
+    "fields": {
+      "name": "Cabo Frio",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 72,
+    "fields": {
+      "name": "Petrolina",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 73,
+    "fields": {
+      "name": "Uberaba",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 74,
+    "fields": {
+      "name": "Rio Branco",
+      "state": 25
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 75,
+    "fields": {
+      "name": "Cascavel",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 76,
+    "fields": {
+      "name": "Governador Valadares",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 77,
+    "fields": {
+      "name": "Várzea Grande",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 78,
+    "fields": {
+      "name": "Santa Maria",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 79,
+    "fields": {
+      "name": "Caruaru",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 80,
+    "fields": {
+      "name": "Palmas",
+      "state": 26
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 81,
+    "fields": {
+      "name": "Boa Vista",
+      "state": 27
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 82,
+    "fields": {
+      "name": "Ilhéus",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 83,
+    "fields": {
+      "name": "Santarém",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 84,
+    "fields": {
+      "name": "Juazeiro do Norte",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 85,
+    "fields": {
+      "name": "Itabuna",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 86,
+    "fields": {
+      "name": "Imperatriz",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 87,
+    "fields": {
+      "name": "Marília",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 88,
+    "fields": {
+      "name": "Presidente Prudente",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 89,
+    "fields": {
+      "name": "São Carlos",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 90,
+    "fields": {
+      "name": "Criciúma",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 91,
+    "fields": {
+      "name": "Guaratinguetá",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 92,
+    "fields": {
+      "name": "Timon",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 93,
+    "fields": {
+      "name": "Mossoró",
+      "state": 16
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 94,
+    "fields": {
+      "name": "Sete Lagoas",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 95,
+    "fields": {
+      "name": "Divinópolis",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 96,
+    "fields": {
+      "name": "Rio Grande",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 97,
+    "fields": {
+      "name": "Arapiraca",
+      "state": 15
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 98,
+    "fields": {
+      "name": "Cachoeiro de Itapemirim",
+      "state": 13
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 99,
+    "fields": {
+      "name": "Rio Claro",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 100,
+    "fields": {
+      "name": "Passo Fundo",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 101,
+    "fields": {
+      "name": "Nova Friburgo",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 102,
+    "fields": {
+      "name": "Araçatuba",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 103,
+    "fields": {
+      "name": "Barra Mansa",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 104,
+    "fields": {
+      "name": "Marabá",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 105,
+    "fields": {
+      "name": "Carpina",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 106,
+    "fields": {
+      "name": "Lajes",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 107,
+    "fields": {
+      "name": "Dourados",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 108,
+    "fields": {
+      "name": "Chapecó",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 109,
+    "fields": {
+      "name": "Rio Largo",
+      "state": 15
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 110,
+    "fields": {
+      "name": "Barreiras",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 111,
+    "fields": {
+      "name": "Sobral",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 112,
+    "fields": {
+      "name": "Rondonópolis",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 113,
+    "fields": {
+      "name": "Guarapuava",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 114,
+    "fields": {
+      "name": "Poços de Caldas",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 115,
+    "fields": {
+      "name": "Macaé",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 116,
+    "fields": {
+      "name": "Paranaguá",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 117,
+    "fields": {
+      "name": "Parnaíba",
+      "state": 20
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 118,
+    "fields": {
+      "name": "Castanhal",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 119,
+    "fields": {
+      "name": "Jequié",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 120,
+    "fields": {
+      "name": "Caxias",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 121,
+    "fields": {
+      "name": "Pindamonhangaba",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 122,
+    "fields": {
+      "name": "Jaraguá do Sul",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 123,
+    "fields": {
+      "name": "Bragança Paulista",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 124,
+    "fields": {
+      "name": "Itapetininga",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 125,
+    "fields": {
+      "name": "Alagoinhas",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 126,
+    "fields": {
+      "name": "Uruguaiana",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 127,
+    "fields": {
+      "name": "Pôrto Seguro",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 128,
+    "fields": {
+      "name": "Barbacena",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 129,
+    "fields": {
+      "name": "Jaú",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 130,
+    "fields": {
+      "name": "Pouso Alegre",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 131,
+    "fields": {
+      "name": "Botucatu",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 132,
+    "fields": {
+      "name": "Santa Cruz do Sul",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 133,
+    "fields": {
+      "name": "Conselheiro Lafaiete",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 134,
+    "fields": {
+      "name": "Garanhuns",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 135,
+    "fields": {
+      "name": "Catanduva",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 136,
+    "fields": {
+      "name": "Apucarana",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 137,
+    "fields": {
+      "name": "Bagé",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 138,
+    "fields": {
+      "name": "Linhares",
+      "state": 13
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 139,
+    "fields": {
+      "name": "Barretos",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 140,
+    "fields": {
+      "name": "Teófilo Otoni",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 141,
+    "fields": {
+      "name": "Passos",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 142,
+    "fields": {
+      "name": "Ubá",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 143,
+    "fields": {
+      "name": "Ourinhos",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 144,
+    "fields": {
+      "name": "Trindade",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 145,
+    "fields": {
+      "name": "Arapongas",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 146,
+    "fields": {
+      "name": "Araguari",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 147,
+    "fields": {
+      "name": "Corumbá",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 148,
+    "fields": {
+      "name": "Erechim",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 149,
+    "fields": {
+      "name": "Juazeiro",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 150,
+    "fields": {
+      "name": "Ponta Porã",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 151,
+    "fields": {
+      "name": "Bento Gonçalves",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 152,
+    "fields": {
+      "name": "Tatuí",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 153,
+    "fields": {
+      "name": "Patos",
+      "state": 19
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 154,
+    "fields": {
+      "name": "Itaituba",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 155,
+    "fields": {
+      "name": "Tubarão",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 156,
+    "fields": {
+      "name": "Muriaé",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 157,
+    "fields": {
+      "name": "Itanhaém",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 158,
+    "fields": {
+      "name": "Santana do Livramento",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 159,
+    "fields": {
+      "name": "Nova Lima",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 160,
+    "fields": {
+      "name": "Brusque",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 161,
+    "fields": {
+      "name": "Assis",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 162,
+    "fields": {
+      "name": "Paulo Afonso",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 163,
+    "fields": {
+      "name": "Ituiutaba",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 164,
+    "fields": {
+      "name": "Santana",
+      "state": 14
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 165,
+    "fields": {
+      "name": "Codó",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 166,
+    "fields": {
+      "name": "Araxá",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 167,
+    "fields": {
+      "name": "Lavras",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 168,
+    "fields": {
+      "name": "Avaré",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 169,
+    "fields": {
+      "name": "Formosa",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 170,
+    "fields": {
+      "name": "Itumbiara",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 171,
+    "fields": {
+      "name": "Abaetetuba",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 172,
+    "fields": {
+      "name": "Três Lagoas",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 173,
+    "fields": {
+      "name": "São João del Rei",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 174,
+    "fields": {
+      "name": "Itaúna",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 175,
+    "fields": {
+      "name": "São Mateus",
+      "state": 13
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 176,
+    "fields": {
+      "name": "Jataí",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 177,
+    "fields": {
+      "name": "São João da Boa Vista",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 178,
+    "fields": {
+      "name": "Tucuruí",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 179,
+    "fields": {
+      "name": "Campo Mourão",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 180,
+    "fields": {
+      "name": "Cachoeira do Sul",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 181,
+    "fields": {
+      "name": "Bacabal",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 182,
+    "fields": {
+      "name": "Pôrto União",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 183,
+    "fields": {
+      "name": "Goiana",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 184,
+    "fields": {
+      "name": "Ijuí",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 185,
+    "fields": {
+      "name": "Altamira",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 186,
+    "fields": {
+      "name": "Paracatu",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 187,
+    "fields": {
+      "name": "Iguatu",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 188,
+    "fields": {
+      "name": "Paragominas",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 189,
+    "fields": {
+      "name": "Guajará-Mirim",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 190,
+    "fields": {
+      "name": "Jabuticabal",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 191,
+    "fields": {
+      "name": "Balsas",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 192,
+    "fields": {
+      "name": "Santa Inês",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 193,
+    "fields": {
+      "name": "Rio Negro",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 194,
+    "fields": {
+      "name": "Santo Ângelo",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 195,
+    "fields": {
+      "name": "Ji-Paraná",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 196,
+    "fields": {
+      "name": "Gurupi",
+      "state": 26
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 197,
+    "fields": {
+      "name": "Parintins",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 198,
+    "fields": {
+      "name": "Curvelo",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 199,
+    "fields": {
+      "name": "Caçador",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 200,
+    "fields": {
+      "name": "Irecê",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 201,
+    "fields": {
+      "name": "Catalão",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 202,
+    "fields": {
+      "name": "Vilhena",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 203,
+    "fields": {
+      "name": "Valença",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 204,
+    "fields": {
+      "name": "Itapeva",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 205,
+    "fields": {
+      "name": "Tupã",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 206,
+    "fields": {
+      "name": "Fernandópolis",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 207,
+    "fields": {
+      "name": "Canela",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 208,
+    "fields": {
+      "name": "Piraçununga",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 209,
+    "fields": {
+      "name": "Pirapora",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 210,
+    "fields": {
+      "name": "Caratinga",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 211,
+    "fields": {
+      "name": "Itapetinga",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 212,
+    "fields": {
+      "name": "São Borja",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 213,
+    "fields": {
+      "name": "Caràzinho",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 214,
+    "fields": {
+      "name": "Santa Rosa",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 215,
+    "fields": {
+      "name": "Manacapuru",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 216,
+    "fields": {
+      "name": "Telêmaco Borba",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 217,
+    "fields": {
+      "name": "Guanambi",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 218,
+    "fields": {
+      "name": "Ariquemes",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 219,
+    "fields": {
+      "name": "Timbaúba",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 220,
+    "fields": {
+      "name": "Picos",
+      "state": 20
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 221,
+    "fields": {
+      "name": "Arcoverde",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 222,
+    "fields": {
+      "name": "Bragança",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 223,
+    "fields": {
+      "name": "Cruzeiro do Sul",
+      "state": 25
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 224,
+    "fields": {
+      "name": "Serrinha",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 225,
+    "fields": {
+      "name": "Vacaria",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 226,
+    "fields": {
+      "name": "Janaúba",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 227,
+    "fields": {
+      "name": "Formiga",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 228,
+    "fields": {
+      "name": "Nova Viçosa",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 229,
+    "fields": {
+      "name": "Itapipoca",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 230,
+    "fields": {
+      "name": "Estância",
+      "state": 23
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 231,
+    "fields": {
+      "name": "São Gabriel",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 232,
+    "fields": {
+      "name": "Concórdia",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 233,
+    "fields": {
+      "name": "São José de Ribamar",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 234,
+    "fields": {
+      "name": "Caicó",
+      "state": 16
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 235,
+    "fields": {
+      "name": "Penápolis",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 236,
+    "fields": {
+      "name": "Coari",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 237,
+    "fields": {
+      "name": "Registro",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 238,
+    "fields": {
+      "name": "Camaquã",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 239,
+    "fields": {
+      "name": "Crateús",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 240,
+    "fields": {
+      "name": "Andradina",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 241,
+    "fields": {
+      "name": "Barra do Garças",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 242,
+    "fields": {
+      "name": "Batatais",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 243,
+    "fields": {
+      "name": "Itacoatiara",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 244,
+    "fields": {
+      "name": "Tefé",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 245,
+    "fields": {
+      "name": "Araguaína",
+      "state": 26
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 246,
+    "fields": {
+      "name": "Quixadá",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 247,
+    "fields": {
+      "name": "Barra do Corda",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 248,
+    "fields": {
+      "name": "Floriano",
+      "state": 20
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 249,
+    "fields": {
+      "name": "Senhor do Bonfim",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 250,
+    "fields": {
+      "name": "Rio Verde",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 251,
+    "fields": {
+      "name": "Ponte Nova",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 252,
+    "fields": {
+      "name": "Guaxupé",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 253,
+    "fields": {
+      "name": "Goianésia",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 254,
+    "fields": {
+      "name": "Capanema",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 255,
+    "fields": {
+      "name": "Itamaraju",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 256,
+    "fields": {
+      "name": "Campo Belo",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 257,
+    "fields": {
+      "name": "Itaberaba",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 258,
+    "fields": {
+      "name": "Breves",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 259,
+    "fields": {
+      "name": "Leopoldina",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 260,
+    "fields": {
+      "name": "Irati",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 261,
+    "fields": {
+      "name": "Cametá",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 262,
+    "fields": {
+      "name": "Piripiri",
+      "state": 20
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 263,
+    "fields": {
+      "name": "Camocim",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 264,
+    "fields": {
+      "name": "Aracati",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 265,
+    "fields": {
+      "name": "Inhumas",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 266,
+    "fields": {
+      "name": "Imbituba",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 267,
+    "fields": {
+      "name": "Araranguá",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 268,
+    "fields": {
+      "name": "Canindé",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 269,
+    "fields": {
+      "name": "Salgueiro",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 270,
+    "fields": {
+      "name": "Penedo",
+      "state": 15
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 271,
+    "fields": {
+      "name": "Castro",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 272,
+    "fields": {
+      "name": "Brumado",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 273,
+    "fields": {
+      "name": "Canoinhas",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 274,
+    "fields": {
+      "name": "Jaguaquara",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 275,
+    "fields": {
+      "name": "Garça",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 276,
+    "fields": {
+      "name": "Palmeira dos Índios",
+      "state": 15
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 277,
+    "fields": {
+      "name": "Salinópolis",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 278,
+    "fields": {
+      "name": "Frutal",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 279,
+    "fields": {
+      "name": "Chapadinha",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 280,
+    "fields": {
+      "name": "Aquidauana",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 281,
+    "fields": {
+      "name": "Bom Jesus da Lapa",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 282,
+    "fields": {
+      "name": "Laguna",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 283,
+    "fields": {
+      "name": "Russas",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 284,
+    "fields": {
+      "name": "Palmas",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 285,
+    "fields": {
+      "name": "Mineiros",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 286,
+    "fields": {
+      "name": "Pinheiro",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 287,
+    "fields": {
+      "name": "Joaçaba",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 288,
+    "fields": {
+      "name": "Remanso",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 289,
+    "fields": {
+      "name": "Nanuque",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 290,
+    "fields": {
+      "name": "Diamantina",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 291,
+    "fields": {
+      "name": "Rosário do Sul",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 292,
+    "fields": {
+      "name": "Cristalina",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 293,
+    "fields": {
+      "name": "Guaíra",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 294,
+    "fields": {
+      "name": "São Francisco do Sul",
+      "state": 18
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 295,
+    "fields": {
+      "name": "Açu",
+      "state": 16
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 296,
+    "fields": {
+      "name": "Oriximiná",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 297,
+    "fields": {
+      "name": "Barreiros",
+      "state": 6
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 298,
+    "fields": {
+      "name": "Xique-Xique",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 299,
+    "fields": {
+      "name": "Barreirinho",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 300,
+    "fields": {
+      "name": "Itapecuru Mirim",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 301,
+    "fields": {
+      "name": "Januária",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 302,
+    "fields": {
+      "name": "Osório",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 303,
+    "fields": {
+      "name": "Morrinhos",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 304,
+    "fields": {
+      "name": "Coroatá",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 305,
+    "fields": {
+      "name": "Capitão Poço",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 306,
+    "fields": {
+      "name": "Maués",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 307,
+    "fields": {
+      "name": "Paranaíba",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 308,
+    "fields": {
+      "name": "Bocaiúva",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 309,
+    "fields": {
+      "name": "São Luís Gonzaga",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 310,
+    "fields": {
+      "name": "Campo Maior",
+      "state": 20
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 311,
+    "fields": {
+      "name": "Jacareacanga",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 312,
+    "fields": {
+      "name": "Barra do Bugres",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 313,
+    "fields": {
+      "name": "Tucano",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 314,
+    "fields": {
+      "name": "Presidente Dutra",
+      "state": 15
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 315,
+    "fields": {
+      "name": "Grajaú",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 316,
+    "fields": {
+      "name": "Novo Horizonte",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 317,
+    "fields": {
+      "name": "Iturama",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 318,
+    "fields": {
+      "name": "Jaguarão",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 319,
+    "fields": {
+      "name": "Pontes e Lacerda",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 320,
+    "fields": {
+      "name": "Almenara",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 321,
+    "fields": {
+      "name": "Tauá",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 322,
+    "fields": {
+      "name": "Acaraú",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 323,
+    "fields": {
+      "name": "Ubaitaba",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 324,
+    "fields": {
+      "name": "Icó",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 325,
+    "fields": {
+      "name": "Iporá",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 326,
+    "fields": {
+      "name": "Santa Vitória do Palmar",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 327,
+    "fields": {
+      "name": "Santa Cruz",
+      "state": 16
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 328,
+    "fields": {
+      "name": "Óbidos",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 329,
+    "fields": {
+      "name": "Niquelândia",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 330,
+    "fields": {
+      "name": "Colíder",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 331,
+    "fields": {
+      "name": "Conceição do Araguaia",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 332,
+    "fields": {
+      "name": "Aripuanã",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 333,
+    "fields": {
+      "name": "Viana",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 334,
+    "fields": {
+      "name": "Miracema",
+      "state": 2
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 335,
+    "fields": {
+      "name": "Ipu",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 336,
+    "fields": {
+      "name": "Canavieiras",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 337,
+    "fields": {
+      "name": "Alenquer",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 338,
+    "fields": {
+      "name": "Sena Madureira",
+      "state": 25
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 339,
+    "fields": {
+      "name": "Granja",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 340,
+    "fields": {
+      "name": "Pimenta Bueno",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 341,
+    "fields": {
+      "name": "Lapa",
+      "state": 9
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 342,
+    "fields": {
+      "name": "São Lourenço do Sul",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 343,
+    "fields": {
+      "name": "Colinas",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 344,
+    "fields": {
+      "name": "Pires do Rio",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 345,
+    "fields": {
+      "name": "Rolim de Moura",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 346,
+    "fields": {
+      "name": "Iguape",
+      "state": 1
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 347,
+    "fields": {
+      "name": "Jardim",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 348,
+    "fields": {
+      "name": "Guanhães",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 349,
+    "fields": {
+      "name": "Itambé",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 350,
+    "fields": {
+      "name": "Santa Maria da Vitória",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 351,
+    "fields": {
+      "name": "Quaraí",
+      "state": 4
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 352,
+    "fields": {
+      "name": "Nova Cruz",
+      "state": 16
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 353,
+    "fields": {
+      "name": "Maracaju",
+      "state": 22
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 354,
+    "fields": {
+      "name": "Baturité",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 355,
+    "fields": {
+      "name": "Itaberaí",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 356,
+    "fields": {
+      "name": "Araçuaí",
+      "state": 3
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 357,
+    "fields": {
+      "name": "Eirunepé",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 358,
+    "fields": {
+      "name": "Barras",
+      "state": 20
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 359,
+    "fields": {
+      "name": "Manicoré",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 360,
+    "fields": {
+      "name": "Portel",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 361,
+    "fields": {
+      "name": "Itupiranga",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 362,
+    "fields": {
+      "name": "Paracuru",
+      "state": 7
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 363,
+    "fields": {
+      "name": "Santa Cruz Cabrália",
+      "state": 8
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 364,
+    "fields": {
+      "name": "Viseu",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 365,
+    "fields": {
+      "name": "Ceres",
+      "state": 11
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 366,
+    "fields": {
+      "name": "Apodi",
+      "state": 16
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 367,
+    "fields": {
+      "name": "Fonte Boa",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 368,
+    "fields": {
+      "name": "São Gabriel da Cachoeira",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 369,
+    "fields": {
+      "name": "Pedreiras",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 370,
+    "fields": {
+      "name": "Barcelos",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 371,
+    "fields": {
+      "name": "Caracaraí",
+      "state": 27
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 372,
+    "fields": {
+      "name": "Alvorada",
+      "state": 26
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 373,
+    "fields": {
+      "name": "Porto Nacional",
+      "state": 26
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 374,
+    "fields": {
+      "name": "Novo Airão",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 375,
+    "fields": {
+      "name": "Sinop",
+      "state": 21
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 376,
+    "fields": {
+      "name": "Tocantinópolis",
+      "state": 26
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 377,
+    "fields": {
+      "name": "Rosário",
+      "state": 17
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 378,
+    "fields": {
+      "name": "Tonantins",
+      "state": 12
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 379,
+    "fields": {
+      "name": "Xinguara",
+      "state": 10
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 380,
+    "fields": {
+      "name": "Amapá",
+      "state": 14
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 381,
+    "fields": {
+      "name": "Abunã",
+      "state": 24
+    }
+  },
+  {
+    "model": "users.city",
+    "pk": 382,
+    "fields": {
+      "name": "Príncipe da Beira",
+      "state": 24
+    }
+  }
+]

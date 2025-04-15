@@ -14,6 +14,7 @@ class ContentNote(models.Model):
         blank=False,
         null=False,
     )
+    create_date = models
     
     def __str__(self):
         return self.id
