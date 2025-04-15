@@ -22,9 +22,6 @@ class User(models.Model):
     def check_password(self, raw_password):
         return check_password(raw_password, self.password)
 
-    def __str__(self):
-        return self.name
-    
 
 class Staff(models.Model):
     id = models.AutoField(primary_key=True)

@@ -1,3 +1,5 @@
+from project_service.decorations import validate_jwt
+from project_service.utils import decrypt_id
 from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
@@ -6,10 +8,8 @@ from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from django.utils.decorators import method_decorator
 
-from ..decorations import validate_jwt
 from ..models.user import User
 from ..serializers import UserSerializer
-from ..utils import decrypt_id
 
 
 class ListUsers(APIView):

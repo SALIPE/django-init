@@ -1,9 +1,9 @@
+from project_service.utils import encrypt_id
 from rest_framework import serializers
 
 from django.contrib.auth.hashers import check_password, make_password
 
 from .models.user import User
-from .utils import encrypt_id
 
 
 class UserAuthTokenSerializer(serializers.Serializer):

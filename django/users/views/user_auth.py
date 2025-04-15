@@ -1,4 +1,5 @@
 import jwt
+from project_service.utils import generate_jwt_token
 from rest_framework.views import APIView
 
 from django.conf import settings
@@ -6,7 +7,6 @@ from django.http import JsonResponse
 
 from ..models.user import User
 from ..serializers import UserAuthTokenSerializer
-from ..utils import generate_jwt_token
 
 JWT_SECRET = settings.SECRET_KEY
 JWT_ALGORITHM = "HS256"

@@ -2,6 +2,7 @@ import base64
 from datetime import datetime, timedelta
 
 import jwt
+from users.models.user import User
 
 from django.conf import settings
 
@@ -11,8 +12,8 @@ JWT_EXPIRATION_DELTA = timedelta(hours=1)
 
 def generate_jwt_token(user):
     payload = {
-        'user_id': user.id,  
-        'email': user.email,
+        'user_id': encrypt_id(user.id, User._meta.db_table),  
+        'email': encrypt_id(user.email, User._meta.db_table),
         'exp': datetime.utcnow() + JWT_EXPIRATION_DELTA,  
     }
     token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)

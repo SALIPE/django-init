@@ -18,5 +18,5 @@ urlpatterns = [
     path('users/', users.PublicUserCreationView.as_view(), name='user-handles'),
     path('users/<str:pk>/', users.UserDetailAPIView.as_view(), name='user-detail'),
     # Content Routes
-    path('content/', views.TestContentView.as_view(), name='cont'),
+    path('content/', views.ContentView.as_view(), name='cont'),
     ]
