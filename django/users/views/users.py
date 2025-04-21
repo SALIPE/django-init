@@ -1,3 +1,5 @@
+from logs.logs_util import user_log_action
+from logs.models import LogAction
 from project_service.decorations import validate_jwt
 from project_service.utils import decrypt_id
 from rest_framework import status
@@ -12,6 +14,7 @@ from ..models.user import User
 from ..serializers import UserSerializer
 
 
+#Only Django admin users can access
 class ListUsers(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -20,7 +23,7 @@ class ListUsers(APIView):
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
-
+# PUblic Create account API
 class PublicUserCreationView(APIView):
     permission_classes = [AllowAny]
     def post(self, request):
@@ -43,6 +46,9 @@ class UserDetailAPIView(APIView):
     def put(self, request, pk):
         user = self.get_object(decrypt_id(pk, User._meta.db_table))
         serializer = UserSerializer(user, data=request.data)
+        user_log_action(
+                    user=user,
+                    action=LogAction.USER_DATA_UPDATE)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)

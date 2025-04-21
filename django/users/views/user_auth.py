@@ -1,4 +1,6 @@
 import jwt
+from logs.logs_util import user_log_action
+from logs.models import LogAction
 from project_service.utils import generate_jwt_token
 from rest_framework.views import APIView
 
@@ -12,7 +14,6 @@ JWT_SECRET = settings.SECRET_KEY
 JWT_ALGORITHM = "HS256"
 
 class UserObtainTokenPairView(APIView):
-    
     def post(self, request, *args, **kwargs):
         serializer = UserAuthTokenSerializer(data=request.data)
        
@@ -20,6 +21,9 @@ class UserObtainTokenPairView(APIView):
         user = serializer.validated_data['user']
 
         token = generate_jwt_token(user)
+        user_log_action(
+                    user=user,
+                    action=LogAction.LOGIN)
         return JsonResponse({"token": token})
     
     
