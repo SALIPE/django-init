@@ -26,6 +26,7 @@ class UserAuthTokenSerializer(serializers.Serializer):
         data['user'] = user
         return data
     
+    
 class UserSerializer(serializers.ModelSerializer):
     cvid = serializers.SerializerMethodField()
     city = serializers.PrimaryKeyRelatedField(queryset=City.objects.all())
@@ -37,12 +38,12 @@ class UserSerializer(serializers.ModelSerializer):
             'first_name',
             'last_name',
             'email',
-            'password',
             'phone',
             'city',
+            'password'
         )
         extra_kwargs = {
-            'password': {'write_only': True},
+            'password': {'write_only': True, 'required': False},
         }
 
     def get_cvid(self, obj):
@@ -61,9 +62,8 @@ class UserSerializer(serializers.ModelSerializer):
             if attr in validated_data:
                 setattr(instance, attr, validated_data[attr])
 
-        password = validated_data.get('password', None)
-        if password:
-            instance.password = make_password(password)
+        if 'password' in validated_data:
+            instance.password = make_password(validated_data["password"])
 
         instance.save()
         return instance
@@ -100,5 +100,23 @@ class CitySerializer(serializers.ModelSerializer):
         model = City
         fields = ('cvid', 'name', 'state')
 
+    def get_cvid(self, obj):
+        return encrypt_id(obj.id, obj._meta.db_table)
+    
+
+class UserDisplaySerializer(serializers.ModelSerializer):
+    cvid = serializers.SerializerMethodField()
+    city = CitySerializer()
+    class Meta:
+        model = User
+        fields = (
+            'cvid',
+            'first_name',
+            'last_name',
+            'email',
+            'phone',
+            'city',
+        )
+        
     def get_cvid(self, obj):
         return encrypt_id(obj.id, obj._meta.db_table)

@@ -7,11 +7,11 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from django.shortcuts import get_object_or_404
 from django.utils.decorators import method_decorator
 
+from ..models.address import City
 from ..models.user import User
-from ..serializers import UserSerializer
+from ..serializers import UserDisplaySerializer, UserSerializer
 
 
 #Only Django admin users can access
@@ -35,23 +35,27 @@ class PublicUserCreationView(APIView):
 
 @method_decorator(validate_jwt, name='dispatch')
 class UserDetailAPIView(APIView):
-    def get_object(self, pk):
-        return get_object_or_404(User, pk=pk)
+    authentication_classes = [] 
+    permission_classes = [AllowAny]
 
-    def get(self, request, pk):
-        user = self.get_object(decrypt_id(pk, User._meta.db_table))
-        serializer = UserSerializer(user)
+    def get(self, request):
+        user = request.logged_user
+        serializer = UserDisplaySerializer(user)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def put(self, request, pk):
-        user = self.get_object(decrypt_id(pk, User._meta.db_table))
+    def put(self, request):
+        user = request.logged_user
+        city_id = request.data["city"]
+        request.data["city"] = decrypt_id(city_id, City._meta.db_table)
+        
         serializer = UserSerializer(user, data=request.data)
         user_log_action(
                     user=user,
                     action=LogAction.USER_DATA_UPDATE)
+        
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response("OK", status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 

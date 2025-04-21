@@ -16,7 +16,7 @@ urlpatterns = [
     path('users/refresh-token', user_auth.UserRefreshTokenView.as_view(), name='user_token_refresh'),
     # User Methods
     path('users', users.PublicUserCreationView.as_view(), name='user-handles'),
-    path('users/<str:pk>', users.UserDetailAPIView.as_view(), name='user-detail'),
+    path('users/by-token', users.UserDetailAPIView.as_view(), name='user-by-token'),
     # Content Routes
     path('content/', views.ContentView.as_view(), name='cont'),
     #Addresses Routes
