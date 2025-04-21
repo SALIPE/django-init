@@ -103,6 +103,12 @@ TEMPLATES = [
     },
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+DEFAULT_FROM_EMAIL = 'noreply@seusite.com'
+FRONTEND_URL = 'http://localhost:3000'  
+
+
 WSGI_APPLICATION = 'project_service.wsgi.application'
 
 
