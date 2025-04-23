@@ -44,8 +44,54 @@ def get_state_acronym(state_name: str) -> str:
         return estados[key]
     
     raise ValueError(f"Estado '{state_name}' não encontrado no mapeamento.")
-    
 
+def get_state_by_acronym(acronym: str) -> str:
+    estados = {
+        "AC": "Acre",
+        "AL": "Alagoas",
+        "AP": "Amapá",
+        "AM": "Amazonas",
+        "BA": "Bahia",
+        "CE": "Ceará",
+        "DF": "Distrito Federal",
+        "ES": "Espírito Santo",
+        "GO": "Goiás",
+        "MA": "Maranhão",
+        "MT": "Mato Grosso",
+        "MS": "Mato Grosso do Sul",
+        "MG": "Minas Gerais",
+        "PA": "Pará",
+        "PB": "Paraíba",
+        "PR": "Paraná",
+        "PE": "Pernambuco",
+        "PI": "Piauí",
+        "RJ": "Rio de Janeiro",
+        "RN": "Rio Grande do Norte",
+        "RS": "Rio Grande do Sul",
+        "RO": "Rondônia",
+        "RR": "Roraima",
+        "SC": "Santa Catarina",
+        "SP": "São Paulo",
+        "SE": "Sergipe",
+        "TO": "Tocantins"
+    }
+
+    acronym = acronym.strip().upper()
+
+    if acronym in estados:
+        return estados[acronym]
+
+    raise ValueError(f"Sigla '{acronym}' não encontrada no mapeamento.")
+
+    
+# {
+#     "model": "users.country",
+#     "pk": 1,
+#     "fields": {
+#       "name": "Brazil",
+#       "code": "BR"
+#     }
+#   },
 
 def generate_fixture(csv_file, output_file, app_label):
     countries = {}
@@ -56,14 +102,14 @@ def generate_fixture(csv_file, output_file, app_label):
     state_pk_counter = 1
     city_pk_counter = 1
 
-    with open(csv_file, mode="r", newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
+    with open(csv_file, mode="r", newline="" ,encoding="utf-8") as f:
+        reader = csv.DictReader(f, delimiter=";")
         for row in reader:
-            country_code = row["iso2"].strip()
-            country_name = row["country"].strip()
-            state_name = row["admin"].strip()
-            state_acronym = get_state_acronym(state_name)
-            city_name = row["city"].strip()
+            country_code = "BR"
+            country_name = "BRASIL"
+            state_acronym = row["STATE"].strip()
+            state_name = get_state_by_acronym(state_acronym) 
+            city_name = row["CITY"].strip()
 
             if country_code not in countries:
                 countries[country_code] = {
@@ -82,7 +128,7 @@ def generate_fixture(csv_file, output_file, app_label):
                     "model": f"{app_label}.state",
                     "pk": state_pk_counter,
                     "fields": {
-                        "name": state_name,
+                        "name": state_name.upper(),
                         "acronym": state_acronym,
                         "country": countries[country_code]["pk"]
                     }
@@ -93,7 +139,7 @@ def generate_fixture(csv_file, output_file, app_label):
                 "model": f"{app_label}.city",
                 "pk": city_pk_counter,
                 "fields": {
-                    "name": city_name,
+                    "name": city_name.upper(),
                     "state": states[state_key]["pk"]
                 }
             })
@@ -113,7 +159,7 @@ def generate_fixture(csv_file, output_file, app_label):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
-    csv_file = "br.csv"
+    csv_file = "BRAZIL_CITIES.csv"
     output_file = "address_data.json"
     app_label = "users"
     generate_fixture(csv_file, output_file, app_label)
